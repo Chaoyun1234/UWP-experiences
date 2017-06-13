@@ -48,8 +48,8 @@ namespace Presidents
 
             MobileCenter.Start("3fd7fc7e-5729-4c4b-8d8e-8ab357da3bb8", typeof(Analytics));
             Analytics.Enabled = true;
-            Analytics.TrackEvent("nextButton");
             Analytics.TrackEvent("previousButton");
+            Analytics.TrackEvent("nextButton");
 
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             if (titleBar != null)
