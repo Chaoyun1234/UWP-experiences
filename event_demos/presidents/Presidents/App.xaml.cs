@@ -43,8 +43,14 @@ namespace Presidents
             //    });
             //}
 
+            MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+            MobileCenter.SetCountryCode("us");
+
             MobileCenter.Start("3fd7fc7e-5729-4c4b-8d8e-8ab357da3bb8", typeof(Analytics));
             Analytics.Enabled = true;
+            Analytics.TrackEvent("nextButton");
+            Analytics.TrackEvent("previousButton");
+
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             if (titleBar != null)
             {
