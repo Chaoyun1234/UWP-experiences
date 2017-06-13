@@ -88,6 +88,7 @@ namespace Presidents
             int index = PresIndex();
             index += increment;
             if (index < 0) index = 0;
+            if (index == 5) throw new System.Exception("");
             if (index >= President.FilteredPresidents.Count) index = President.FilteredPresidents.Count;
             this.Frame.Navigate(typeof(DetailsView), President.FilteredPresidents[index]);
         }
