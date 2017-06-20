@@ -10,7 +10,7 @@ using Windows.System.Profile;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
-//using Microsoft.Azure.Mobile.Push;
+using Microsoft.Azure.Mobile.Push;
 
 
 namespace Presidents
@@ -45,14 +45,32 @@ namespace Presidents
             //        Source = new Uri("ms-appx:///TvSafeColors.xaml")
             //    });
             //}
-
+            Push.PushNotificationReceived += (sender, es) => {
+                // Add the notification message and title to the message
+                var summary = $"Push notification received:" +
+                        $"\n\tNotification title: {es.Title}" +
+                        $"\n\tMessage: {es.Message}";
+                // If there is custom data associated with the notification,
+                // print the entries
+                if (es.CustomData != null)
+                {
+                    summary += "\n\tCustom data:\n";
+                    foreach (var key in es.CustomData.Keys)
+                    {
+                        summary += $"\t\t{key} : {es.CustomData[key]}\n";
+                    }
+                }
+                // Send the notification summary to debug output
+                System.Diagnostics.Debug.WriteLine(summary);
+            };
+            MobileCenter.LogLevel = LogLevel.Verbose;
             MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
             MobileCenter.SetCountryCode("us");
 
-            MobileCenter.Start("3fd7fc7e-5729-4c4b-8d8e-8ab357da3bb8", typeof(Analytics), typeof(Crashes));
-            //Push.CheckLaunchedFromNotification(e);
+            MobileCenter.Start("3fd7fc7e-5729-4c4b-8d8e-8ab357da3bb8", typeof(Analytics), typeof(Crashes), typeof(Push));
+            Push.CheckLaunchedFromNotification(e);
             Analytics.Enabled = true;
-            //Push.Enabled = true;
+            Push.Enabled = true;
             Analytics.TrackEvent("previousButton");
             Analytics.TrackEvent("nextButton");
 
