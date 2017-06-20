@@ -10,7 +10,7 @@ using Windows.System.Profile;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
-using Microsoft.Azure.Mobile.Push;
+//using Microsoft.Azure.Mobile.Push;
 
 
 namespace Presidents
@@ -49,10 +49,10 @@ namespace Presidents
             MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
             MobileCenter.SetCountryCode("us");
 
-            MobileCenter.Start("3fd7fc7e-5729-4c4b-8d8e-8ab357da3bb8", typeof(Analytics), typeof(Crashes), typeof(Push));
-            Push.CheckLaunchedFromNotification(e);
+            MobileCenter.Start("3fd7fc7e-5729-4c4b-8d8e-8ab357da3bb8", typeof(Analytics), typeof(Crashes));
+            //Push.CheckLaunchedFromNotification(e);
             Analytics.Enabled = true;
-            Push.Enabled = true;
+            //Push.Enabled = true;
             Analytics.TrackEvent("previousButton");
             Analytics.TrackEvent("nextButton");
 
