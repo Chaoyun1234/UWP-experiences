@@ -10,6 +10,8 @@ using Windows.System.Profile;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
+using Microsoft.Azure.Mobile.Push;
+
 namespace Presidents
 {
     sealed partial class App : Application
@@ -30,6 +32,26 @@ namespace Presidents
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            Push.PushNotificationReceived += (sender, es) => {
+                // Add the notification message and title to the message
+                var summary = $"Push notification received:" +
+                        $"\n\tNotification title: {es.Title}" +
+                        $"\n\tMessage: {es.Message}";
+
+                // If there is custom data associated with the notification,
+                // print the entries
+                if (es.CustomData != null)
+                {
+                    summary += "\n\tCustom data:\n";
+                    foreach (var key in es.CustomData.Keys)
+                    {
+                        summary += $"\t\t{key} : {es.CustomData[key]}\n";
+                    }
+                }
+                // Send the notification summary to debug output
+                System.Diagnostics.Debug.WriteLine(summary);
+            };
+            MobileCenter.LogLevel = LogLevel.Verbose;
             // TODO: 1.2 - Ensure we use ALL of the window space.  That means we have to make sure we follow the safe area of the screen!
             // ApplicationView.GetForCurrentView().SetDesiredBoundsMode(ApplicationViewBoundsMode.UseCoreWindow);
 
@@ -42,11 +64,13 @@ namespace Presidents
             //        Source = new Uri("ms-appx:///TvSafeColors.xaml")
             //    });
             //}
-
-            MobileCenter.Start("1fb3cd99-3df6-4996-b3ad-827f656a6d43", typeof(Analytics), typeof(Crashes));
+            MobileCenter.SetCountryCode("us");
+            MobileCenter.Start("1fb3cd99-3df6-4996-b3ad-827f656a6d43", typeof(Analytics), typeof(Crashes), typeof(Push));
             Analytics.Enabled = true;
             Analytics.TrackEvent("previousButton_Click");
             Analytics.TrackEvent("nextButton_Click");
+            var installid = MobileCenter.InstallId;
+            Push.CheckLaunchedFromNotification(e);
 
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             if (titleBar != null)
