@@ -65,10 +65,15 @@ namespace Presidents
             //    });
             //}
             MobileCenter.SetCountryCode("us");
-            MobileCenter.Start("1fb3cd99-3df6-4996-b3ad-827f656a6d43", typeof(Analytics), typeof(Crashes), typeof(Push));
+
+            //UWP-Push
+            //MobileCenter.Start("5f5f61af-13c4-44f6-90fe-1d92fa033250", typeof(Push)); 
+
+            MobileCenter.Start("b30114e1-eaf8-43fc-9869-6dea3a48ce7f", typeof(Analytics), typeof(Crashes), typeof(Push));
             Analytics.Enabled = true;
             Analytics.TrackEvent("previousButton_Click");
             Analytics.TrackEvent("nextButton_Click");
+            Analytics.TrackEvent("Create_Click");
             var installid = MobileCenter.InstallId;
             Push.CheckLaunchedFromNotification(e);
 

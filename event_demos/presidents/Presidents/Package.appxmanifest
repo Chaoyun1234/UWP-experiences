@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="63967vsclient.Chaoyun123" Publisher="CN=6B0E04BB-E44B-43CE-89DF-DBA5BC33E3A2" Version="1.1.0.0" />
-  <mp:PhoneIdentity PhoneProductId="2e6e99d9-6ce9-464e-a781-68a7c8be7b8f" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="63967vsclient.Presidents-Chaoyun" Publisher="CN=6B0E04BB-E44B-43CE-89DF-DBA5BC33E3A2" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="cf554a28-3537-4722-ad42-4d5db9236f50" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Chaoyun123</DisplayName>
+    <DisplayName>Presidents-Chaoyun</DisplayName>
     <PublisherDisplayName>vsclient</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Presidents.App">
-      <uap:VisualElements DisplayName="Chaoyun123" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Presidents" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="Presidents-Chaoyun" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Presidents" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="black" />

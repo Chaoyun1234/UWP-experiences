@@ -358,9 +358,9 @@
     <Language Code="zu-za" InMinimumRequirementSet="true" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>63967vsclient.Chaoyun123</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.Presidents-Chaoyun</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>Chaoyun123</ReservedName>
+      <ReservedName>Presidents-Chaoyun</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
@@ -368,6 +368,9 @@
     <MainPackageIdentityName>63967vsclient.2658707C5F2A4</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.asxe</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.App</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.avauwp</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.avauwppush</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.Chaoyun123</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.17933E35BB175</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.fc</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.fdfrtf</MainPackageIdentityName>
@@ -583,6 +586,9 @@
     <MainPackageIdentityName>63967vsclient.uio</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UniversalWin10</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.uuki</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.UWPMCPush</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.UWPPush</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.UWPPush1</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWPPushDemo</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWPService</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.vcf</MainPackageIdentityName>
@@ -641,6 +647,7 @@
     <MainPackageIdentityName>63967vsclient.xssx</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.xsxsx</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.xsxsxs</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.xuxiao-uwp</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.xxt</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.xxtemp</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.xxtt</MainPackageIdentityName>
@@ -658,5 +665,5 @@
     <MainPackageIdentityName>63967vsclient.zcf001</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.zxc1</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9NGPRJB82LJZ" />
+  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9PKJZZ3QQZDD" />
 </StoreAssociation>
