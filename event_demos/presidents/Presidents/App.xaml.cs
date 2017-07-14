@@ -66,10 +66,10 @@ namespace Presidents
             //}
             MobileCenter.SetCountryCode("us");
             MobileCenter.Start("1fb3cd99-3df6-4996-b3ad-827f656a6d43", typeof(Analytics), typeof(Crashes), typeof(Push));
-            Analytics.Enabled = true;
+            //Analytics.Enabled = true;
             Analytics.TrackEvent("previousButton_Click");
             Analytics.TrackEvent("nextButton_Click");
-            var installid = MobileCenter.InstallId;
+            //var installid = MobileCenter.InstallId;
             Push.CheckLaunchedFromNotification(e);
 
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
