@@ -64,12 +64,14 @@ namespace Presidents
             //        Source = new Uri("ms-appx:///TvSafeColors.xaml")
             //    });
             //}
+            MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
             MobileCenter.SetCountryCode("us");
-            MobileCenter.Start("1fb3cd99-3df6-4996-b3ad-827f656a6d43", typeof(Analytics), typeof(Crashes), typeof(Push));
+            MobileCenter.Start("45af7a62-ba6b-4e6f-a2f9-766ffd24c636", typeof(Analytics), typeof(Crashes), typeof(Push));
             //Analytics.Enabled = true;
             Analytics.TrackEvent("previousButton_Click");
             Analytics.TrackEvent("nextButton_Click");
             //var installid = MobileCenter.InstallId;
+            var installId = MobileCenter.GetInstallIdAsync();
             Push.CheckLaunchedFromNotification(e);
 
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
