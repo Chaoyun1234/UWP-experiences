@@ -52,10 +52,10 @@ namespace Presidents
                 System.Diagnostics.Debug.WriteLine(summary);
             };
             MobileCenter.LogLevel = LogLevel.Verbose;
-            // TODO: 1.2 - Ensure we use ALL of the window space.  That means we have to make sure we follow the safe area of the screen!
-            // ApplicationView.GetForCurrentView().SetDesiredBoundsMode(ApplicationViewBoundsMode.UseCoreWindow);
+            // TODO: 1.2 ewBoundsMode.UseCoreWindow);
 
-            // TODO: 5.1 - If we want a ten foot view, we probably want color safe colors as well.  This dictionary solves that for default styles.
+            // TODO: 5.1 - If we want a ten foot - Ensure we use ALL of the window space.  That means we have to make sure we follow the safe area of the screen!
+            // ApplicationView.GetForCurrentView().SetDesiredBoundsMode(ApplicationViview, we probably want color safe colors as well.  This dictionary solves that for default styles.
             //if (App.IsTenFoot)
             //{
             //    // use TV colorsafe values
@@ -64,9 +64,9 @@ namespace Presidents
             //        Source = new Uri("ms-appx:///TvSafeColors.xaml")
             //    });
             //}
-            MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+            //MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
             MobileCenter.SetCountryCode("us");
-            MobileCenter.Start("45af7a62-ba6b-4e6f-a2f9-766ffd24c636", typeof(Analytics), typeof(Crashes), typeof(Push));
+            MobileCenter.Start("36741244-4b55-4514-98ea-289bdf300b17", typeof(Analytics), typeof(Crashes), typeof(Push));
             //Analytics.Enabled = true;
             Analytics.TrackEvent("previousButton_Click");
             Analytics.TrackEvent("nextButton_Click");
