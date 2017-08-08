@@ -66,7 +66,7 @@ namespace Presidents
             //}
             MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
             MobileCenter.SetCountryCode("us");
-            MobileCenter.Start("45af7a62-ba6b-4e6f-a2f9-766ffd24c636", typeof(Analytics), typeof(Crashes), typeof(Push));
+            MobileCenter.Start("0019d438-4d6f-456f-8b1a-10fd469780e2", typeof(Analytics), typeof(Crashes), typeof(Push));
             //Analytics.Enabled = true;
             Analytics.TrackEvent("previousButton_Click");
             Analytics.TrackEvent("nextButton_Click");
