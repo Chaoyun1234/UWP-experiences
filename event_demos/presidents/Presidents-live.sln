@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio 14
-VisualStudioVersion = 14.0.25110.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26728.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presidents", "Presidents\Presidents.csproj", "{2311E5BA-EC41-4DCB-911F-7CD127217A2B}"
 EndProject
@@ -36,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB9A26AB-3A03-47A5-AA65-BB3D3C225831}
 	EndGlobalSection
 EndGlobal
