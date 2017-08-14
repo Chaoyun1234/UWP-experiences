@@ -64,9 +64,9 @@ namespace Presidents
             //        Source = new Uri("ms-appx:///TvSafeColors.xaml")
             //    });
             //}
-            MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+           //MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
             MobileCenter.SetCountryCode("us");
-            MobileCenter.Start("0019d438-4d6f-456f-8b1a-10fd469780e2", typeof(Analytics), typeof(Crashes), typeof(Push));
+            MobileCenter.Start("63fc5c39-096b-476a-b634-b1a0c13f7be1", typeof(Analytics), typeof(Crashes), typeof(Push));
             //Analytics.Enabled = true;
             Analytics.TrackEvent("previousButton_Click");
             Analytics.TrackEvent("nextButton_Click");

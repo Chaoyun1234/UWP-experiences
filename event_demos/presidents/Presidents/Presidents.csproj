@@ -96,6 +96,7 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="Presidents_StoreKey.pfx" />
+    <None Include="Presidents_TemporaryKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -125,7 +126,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Presidents_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\1024px-James_Madison.jpg" />
@@ -159,6 +159,7 @@
     <Content Include="Assets\James_Monroe_White_House_portrait_1819.gif" />
     <Content Include="Assets\John_F__Kennedy.jpg" />
     <Content Include="Assets\JQA_Photo_tif.jpg" />
+    <Content Include="Assets\kawaii.png" />
     <Content Include="Assets\Lyndon_B._Johnson_Oval_Office_Portrait.jpg" />
     <Content Include="Assets\Martin_Van_Buren_by_Mathew_Brady_c1855-58.jpg" />
     <Content Include="Assets\mckinley25.jpg" />
