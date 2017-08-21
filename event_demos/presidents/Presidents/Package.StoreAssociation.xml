@@ -358,9 +358,9 @@
     <Language Code="zu-za" InMinimumRequirementSet="true" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>63967vsclient.UWPStagin0808</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.UWP0814</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>UWPStagin0808</ReservedName>
+      <ReservedName>UWP0814</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
@@ -368,9 +368,12 @@
     <MainPackageIdentityName>63967vsclient.2658707C5F2A4</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.asxe</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.App</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.appaa</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.App3.UWP</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.ava0810</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.AVA744</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.AVAAVAAVA</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.avapresidents0810</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.avapush0710</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.avauwp</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.avauwp74push</MainPackageIdentityName>
@@ -611,10 +614,12 @@
     <MainPackageIdentityName>63967vsclient.UWP0803</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWP-CHZHA</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWPMCPush</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.UWP-Presidentsbys</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWPPush</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWPPush1</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWPPushDemo</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWPService</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.UWPStagin0808</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWPTESTon0713</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWP-TEST-on0713-3</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.UWP-test-on0714-1</MainPackageIdentityName>
@@ -684,11 +689,16 @@
     <MainPackageIdentityName>63967vsclient.xzcv</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.yjhwsad</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.yng</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.62290ED3E8417</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.50918524ED07F</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.173893458BFD3</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.4046510250360</MainPackageIdentityName>
+    <MainPackageIdentityName>63967vsclient.22175C4146126</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.zd</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.zasx</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.zbahhu</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.zcf001</MainPackageIdentityName>
     <MainPackageIdentityName>63967vsclient.zxc1</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9PCQZQC8X287" />
+  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9P0NS7F3CZBR" />
 </StoreAssociation>

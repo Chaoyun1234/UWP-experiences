@@ -64,15 +64,21 @@ namespace Presidents
             //        Source = new Uri("ms-appx:///TvSafeColors.xaml")
             //    });
             //}
-           //MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
-            MobileCenter.SetCountryCode("us");
-            MobileCenter.Start("63fc5c39-096b-476a-b634-b1a0c13f7be1", typeof(Analytics), typeof(Crashes), typeof(Push));
+
+            //Use custom properties
+            CustomProperties properties = new CustomProperties();
+            properties.Set("color", "blue").Set("score", 10).Set("now", DateTime.UtcNow);
+            MobileCenter.SetCustomProperties(properties);
+            //MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+            MobileCenter.SetCountryCode("fr");
+            MobileCenter.Start("ca6c115c-5813-42e9-8c5c-211399d29d7c", typeof(Analytics), typeof(Crashes), typeof(Push));
             //Analytics.Enabled = true;
             Analytics.TrackEvent("previousButton_Click");
             Analytics.TrackEvent("nextButton_Click");
             //var installid = MobileCenter.InstallId;
             var installId = MobileCenter.GetInstallIdAsync();
             Push.CheckLaunchedFromNotification(e);
+
 
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             if (titleBar != null)
