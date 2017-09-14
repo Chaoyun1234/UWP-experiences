@@ -11,6 +11,8 @@ using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
 using Microsoft.Azure.Mobile.Push;
+using Microsoft.Azure.Mobile.Distribute;
+using Windows.UI.Xaml.Controls;
 
 namespace Presidents
 {
@@ -64,19 +66,21 @@ namespace Presidents
             //        Source = new Uri("ms-appx:///TvSafeColors.xaml")
             //    });
             //}
+            //MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+            Distribute.ReleaseAvailable = OnReleaseAvailable;
+            MobileCenter.SetCountryCode("us");
+            MobileCenter.Start("113ad064-f03f-464c-b1c9-ed4fb9037cb0", typeof(Analytics), typeof(Crashes), typeof(Push), typeof(Distribute));
 
             //Use custom properties
             CustomProperties properties = new CustomProperties();
             properties.Set("color", "blue").Set("score", 10).Set("now", DateTime.UtcNow);
             MobileCenter.SetCustomProperties(properties);
-            //MobileCenter.SetLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
-            MobileCenter.SetCountryCode("fr");
-            MobileCenter.Start("ca6c115c-5813-42e9-8c5c-211399d29d7c", typeof(Analytics), typeof(Crashes), typeof(Push));
             //Analytics.Enabled = true;
-            Analytics.TrackEvent("previousButton_Click");
+            Analytics.TrackEvent("President_previous_Button_Click_ButtonCrashes");
             Analytics.TrackEvent("nextButton_Click");
             //var installid = MobileCenter.InstallId;
             var installId = MobileCenter.GetInstallIdAsync();
+            
             Push.CheckLaunchedFromNotification(e);
 
 
@@ -175,5 +179,50 @@ namespace Presidents
         }
 
         public static event EventHandler TenFootModeChanged;
+        bool OnReleaseAvailable(ReleaseDetails releaseDetails)
+        {
+            // Look at releaseDetails public properties to get version information, release notes text or release notes URL
+            string versionName = releaseDetails.ShortVersion;
+            string versionCodeOrBuildNumber = releaseDetails.Version;
+            string releaseNotes = releaseDetails.ReleaseNotes;
+            Uri releaseNotesUrl = releaseDetails.ReleaseNotesUrl;
+
+            // custom dialog
+            var title = "Version " + versionName + " available!";
+            var dialog = new ContentDialog();
+            dialog.Title = title;
+            dialog.Content = releaseNotes;
+
+            //On mandatory update, user cannot postpone
+            if (releaseDetails.MandatoryUpdate)
+            {
+                dialog.PrimaryButtonText = "Download and Install";
+                dialog.PrimaryButtonClick += (s, e) =>
+                {
+                    Distribute.NotifyUpdateAction(UpdateAction.Update);
+                };
+
+            }
+            else
+            {
+                dialog.PrimaryButtonText = "Download and Install";
+                dialog.PrimaryButtonClick += (s, e) =>
+                {
+                    Distribute.NotifyUpdateAction(UpdateAction.Update);
+                };
+                dialog.SecondaryButtonText = "Maybe tomorrow...";
+                dialog.SecondaryButtonClick += (s, e) =>
+                {
+                    Distribute.NotifyUpdateAction(UpdateAction.Update);
+                };
+            }
+            async void show()
+            {
+                await dialog.ShowAsync();
+            }
+            show();
+            //Return true if you are using your own dialog, false otherwise
+            return true;
+        }
     }
 }
